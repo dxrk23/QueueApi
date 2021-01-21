@@ -1,6 +1,7 @@
-﻿namespace QueueApi.DTO
+﻿using System;
+namespace SetOfWorkerServices.DTO
 {
-    public class MessageDto
+    public class MessageDTO
     {
 
         public int Id { get; set; }

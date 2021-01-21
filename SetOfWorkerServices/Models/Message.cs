@@ -1,6 +1,5 @@
 ﻿using System;
-
-namespace QueueApi.Models
+namespace SetOfWorkerServices.Models
 {
     public class Message
     {

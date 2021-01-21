@@ -1,7 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
-using QueueApi.Models;
+﻿using System;
+using Microsoft.EntityFrameworkCore;
+using SetOfWorkerServices.Models;
 
-namespace QueueApi.Data
+namespace SetOfWorkerServices.Data
 {
     public class DataContext : DbContext
     {

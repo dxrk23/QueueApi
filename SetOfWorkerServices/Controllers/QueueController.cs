@@ -1,13 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using QueueApi.DTO;
-using QueueApi.Models;
-using QueueApi.Repositories.Interfaces;
+using SetOfWorkerServices.DTO;
+using SetOfWorkerServices.Models;
+using SetOfWorkerServices.Repositories.Interfaces;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace QueueApi.Controllers
+namespace SetOfWorkerServices.Controllers
 {
     [Route("api/[controller]")]
     public class QueueController : Controller
@@ -21,7 +23,7 @@ namespace QueueApi.Controllers
 
 
         [HttpPost("add")]
-        public async Task<ActionResult> Add(MessageDto message)
+        public async Task<ActionResult> Add(MessageDTO message)
         {
             Message m = new Message()
             {
@@ -62,7 +64,7 @@ namespace QueueApi.Controllers
 
 
         [HttpGet("retrieve/log")]
-        public async Task<ActionResult> GetLog()
+        public async Task<ActionResult> getLog()
         {
             var messages = await _queueRepository.GetLoggingMessage();
             return Ok(messages);
